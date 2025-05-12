@@ -1,0 +1,107 @@
+/* A todos los elemntos respeten el valor calculado que se le van a dar a cada uno  */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    font-family: "Milonga", serif;
+    box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100%;
+  margin: 30px auto;  
+  padding: 10px;
+  
+}
+
+.img_login{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    background-size: cover;
+    
+}
+
+.texto_formulario{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    float: left;
+    display: flex;
+    justify-content: center;
+    border: solid 1px #00000049; 
+     box-shadow: 8px 5px 12px 5px rgba(0, 0, 0, 0.3);
+}
+
+.texto_formulario form{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto_formulario h1{
+    font-size: 3em;
+    text-align: center;
+    color: rgb(95, 8, 8);
+    margin: 0 0 40px 0;
+
+}
+.texto_formulario p{
+    font-size: 1em;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.637);
+    margin: 5px 0 40px 0;
+
+}
+
+.texto_formulario form input{
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 20px;
+    outline: none;
+    border: solid 0.5px #534d4d6b;
+    box-shadow: 8px 5px 12px rgba(0, 0, 0, 0.3);
+    margin: 0 0 10px 0;
+
+    
+
+}
+.texto_formulario label{
+    width: 100%;
+    font-size: 18px;
+    margin: 5px 0;
+}
+.texto_formulario .btn_login{
+    margin-top:20px ;
+    background: #530404;
+    color: aliceblue;
+    font-size: 18px;
+    width: 50%;
+    box-shadow: 8px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.texto_formulario .btn_login:hover{
+    background-color: #691515;
+    
+}
+
+.texto_formulario a{
+    text-decoration: none;
+    color: #070606;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .img_login{
+        display: none;
+    }
+    .texto_formulario{
+        width: 100%;
+    }
+}
+
