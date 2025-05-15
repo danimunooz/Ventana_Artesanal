@@ -14,7 +14,7 @@ header .navegacion {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 5px 12%;
+   padding: 10px 12%;
    transition: all .50s ease;
    background-color: rgb(75, 3, 3);
    
@@ -39,7 +39,7 @@ header .navegacion {
     
     padding: 5px 0;
     margin: 0 30px;
-    transition: all .40s ease;
+    transition: all .50s ease;
     color: aliceblue;
 }
 
@@ -61,7 +61,7 @@ header .navegacion {
     color: aliceblue;
      font-size: 1.1rem;
     font-weight: 500;
-    transition: all .40s ease;
+    transition: all .50s ease;
     text-decoration: none;
 }
 
@@ -79,56 +79,101 @@ header .navegacion {
     color: rgba(255, 254, 254, 0.479);
 }
 
-/* #menu-icon{
+#menu-icon{
     font-size: 38px;
     color: aliceblue;
     cursor: pointer;
     z-index: 10001;
     display: none;
-} */
+} 
 
+
+/* RESPONSIVE */
+@media (max-width:1280px){
+    .navegacion{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .items a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width:1090px){
+    #menu-icon{
+        display: block;
+    }
+    .items {
+        position: absolute;
+        top: 20%;
+        right: -100%;
+        width: 270px;
+        height: 40vh;
+        background: #62d107;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .items a {
+        display: block;
+        margin: 10px 0;
+        padding: 0px 10px;
+        transition: all .50s ease;
+    }
+    .items.open{
+        right: 2%;
+    }
+}
 /* BANNER */
 
 
 
 /* Esto es el slider */
-.banner{
+
+.slider_banner{
     width: 100%;
-   height: 450px;
-   overflow: hidden;
-  }
-  
-  figure{
-    position: relative;
-    left: 0;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+}
+
+.slider_banner ul{
+    display: flex;
+    padding: 0;
     width: 400%;
-    animation: 30s slide infinite;
-  }
-  
-  .slider{
-    position: relative;
-    width: 25%;
-    float: left;
-  }
-  
-  .slider img{
+    animation: slide 30s infinite ;
+}
+
+.slider_banner li{
     width: 100%;
-    height: 600px;
-  }
-  
-  
-  @keyframes slide{
+    list-style: none;
+    position: relative;
+}
+
+.slider_banner img{
+    width: 100%;
+    
+}
+
+ @keyframes slide{
     0%{
-        left:0;
+        margin-left:0;
     }
     10%{
-        left:0;
+        margin-left:0;
     }
     50%{
-        left:-100%;
+        margin-left:-100%;
     }
     95%{
-        left: -200%;
+        margin-left: -200%;
     }
+    100%{
+        margin-left: -200%;
+    }
+
+    
 }
-   /* Hasta acá es el slider*/
